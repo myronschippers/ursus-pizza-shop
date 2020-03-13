@@ -14,6 +14,14 @@ function init() {
 
 function deleteOrder() {
   console.log('DELETE:', this);
+  // $(this).parent().parent().remove();
+  const orderIndex = $(this).data('index')
+  console.log('DELETE:',orderIndex);
+
+  // create a function to adjust price
+  orders.splice(orderIndex, 1);
+
+  render();
 }
 
 function submitPizzaOrder(event) {
@@ -49,7 +57,7 @@ function render() {
       <td>${individualOrder.pizzaType}</td>
       <td>${individualOrder.pizzaQuantity}</td>
       <td>$${individualOrder.pizzaPrice}</td>
-      <td><button class="js-btn-delete">Delete</button></td>
+      <td><button class="js-btn-delete" data-index="${i}">Delete</button></td>
     </tr>
     `);
   }
