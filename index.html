@@ -15,19 +15,23 @@
   <header>
     <h1>Ursus Pizza Shop</h1>
   </header>
-
+  
   <!-- Make a form for adding new pizza order -->
   <form class="js-pizza-add-order">
     <div>
-      <input class="js-input-pizza" type="text" placeholder="Pizza" />
+      <label>Pizza:
+        <input class="js-input-pizza" required type="text" placeholder="Pizza" id="pizza" name="pizza" />
+      </label>
     </div>
     <div>
-      <input class="js-input-quantity" type="number" placeholder="How Many?" />
+      <label for="quantity">Quantity:</label>
+      <input class="js-input-quantity" type="number" placeholder="How Many?" id="quantity" name="quantity" />
     </div>
     <div>
-      $<input class="js-input-price" type="number" placeholder="Price" />
+      <label for="price">Price:</label>
+      $<input class="js-input-price" type="number" placeholder="Price" id="price" name="price" />
     </div>
-    <button class="js-click-add-order" type="submit">Add To Order</button>
+    <button class="js-click-add-order">Add To Order</button>
   </form>
 
   <!-- Make a table that displays all of my orders -->
@@ -37,6 +41,7 @@
         <th>Pizza Name</th>
         <th>Quantity</th>
         <th>Price</th>
+        <th></th>
       </tr>
     </thead>
     <tbody class="js-table-body">
@@ -44,6 +49,7 @@
         <td>Pepperoni</td>
         <td>1</td>
         <td>$40.00</td>
+        <td><button>Delete</button></td>
       </tr>
     </tbody>
   </table>
