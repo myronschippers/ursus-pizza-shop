@@ -29,13 +29,17 @@ function submitPizzaOrder(event) {
 
 function render() {
   $('.js-table-body').empty();
+  // starting with a base total price to be able to ad order cost to it
   let totalPrice = 0;
 
+  // loop through every item in the orders array
   for (let i = 0; i < orders.length; i++) {
     // TODO: make this add order to DOM
     const individualOrder = orders[i];
+    // multiply the price with the quantity and then add it to the totalPrice
     totalPrice += (individualOrder.pizzaPrice * individualOrder.pizzaQuantity);
 
+    // add individual order items to the DOM
     $('.js-table-body').append(`
     <tr>
       <td>${individualOrder.pizzaType}</td>
@@ -46,7 +50,7 @@ function render() {
     `);
   }
 
-  // add sum of prices
+  // show total price in the DOM
   $('.js-total-price').text(`$${totalPrice}`);
 
 }
