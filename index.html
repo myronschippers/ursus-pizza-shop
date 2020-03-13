@@ -4,13 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="jQuery.js" type="text/javascript"></script>
   <script src="client.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
 
   <title>Document</title>
 </head>
 <body>
+  <!-- Make a header telling me where i am -->
+  <header>
+    <h1>Ursus Pizza Shop</h1>
+  </header>
 
-    
+  <!-- Make a form for adding new pizza order -->
+  <form class="js-pizza-add-order">
+    <div>
+      <input class="js-input-pizza" type="text" placeholder="Pizza" />
+    </div>
+    <div>
+      <input class="js-input-quantity" type="number" placeholder="How Many?" />
+    </div>
+    <div>
+      $<input class="js-input-price" type="number" placeholder="Price" />
+    </div>
+    <button class="js-click-add-order" type="submit">Add To Order</button>
+  </form>
+
+  <!-- Make a table that displays all of my orders -->
+  <table class="js-table">
+    <thead>
+      <tr>
+        <th>Pizza Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody class="js-table-body">
+      <tr class="js-table-body-row">
+        <td>Pepperoni</td>
+        <td>1</td>
+        <td>$40.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Display the total for my orders -->
+  <div>
+    Total: <span class="js-total-price">100.00</span>
+  </div>
   
 </body>
 </html>
