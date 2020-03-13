@@ -7,9 +7,13 @@ $(document).ready(init);
 function init() {
   // create any event i want to listen for
   $('.js-pizza-add-order').on('submit', submitPizzaOrder);
-  $('.js-table-body').on('click', submitPizzaOrder);
+  $('.js-table-body').on('click', '.js-btn-delete', deleteOrder);
 
   // $('.js-click-add-order').on('click', clickAddToOrder);
+}
+
+function deleteOrder() {
+  console.log('DELETE:', this);
 }
 
 function submitPizzaOrder(event) {
