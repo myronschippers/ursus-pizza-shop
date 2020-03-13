@@ -16,48 +16,49 @@
     <h1>Ursus Pizza Shop</h1>
   </header>
   
-  <!-- Make a form for adding new pizza order -->
-  <form class="js-pizza-add-order">
-    <div>
-      <label>Pizza:
-        <input class="js-input-pizza" required type="text" placeholder="Pizza" id="pizza" name="pizza" />
-      </label>
-    </div>
-    <div>
-      <label for="quantity">Quantity:</label>
-      <input class="js-input-quantity" type="number" placeholder="How Many?" id="quantity" name="quantity" />
-    </div>
-    <div>
-      <label for="price">Price:</label>
-      $<input class="js-input-price" type="number" placeholder="Price" id="price" name="price" />
-    </div>
-    <button class="js-click-add-order">Add To Order</button>
-  </form>
+  <main class="container">
+    <!-- Make a form for adding new pizza order -->
+    <form class="vr_2x vr_children js-pizza-add-order">
+      <div>
+        <label>Pizza:
+          <input class="js-input-pizza" required type="text" placeholder="Pizza" id="pizza" name="pizza" />
+        </label>
+      </div>
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input class="js-input-quantity" type="number" placeholder="How Many?" id="quantity" name="quantity" />
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        $<input class="js-input-price" type="number" placeholder="Price" id="price" name="price" />
+      </div>
+      <button class="btn js-click-add-order">Add To Order</button>
+    </form>
 
-  <!-- Make a table that displays all of my orders -->
-  <table class="js-table">
-    <thead>
-      <tr>
-        <th>Pizza Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody class="js-table-body">
-      <tr class="js-table-body-row">
-        <td>Pepperoni</td>
-        <td>1</td>
-        <td>$40.00</td>
-        <td><button class="js-btn-delete">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+    <!-- Make a table that displays all of my orders -->
+    <table class="vr js-table">
+      <thead>
+        <tr>
+          <th>Pizza Name</th>
+          <th>Quantity</th>
+          <th colspan="2">Price</th>
+        </tr>
+      </thead>
+      <tbody class="js-table-body">
+        <tr class="js-table-body-row">
+          <td>Pepperoni</td>
+          <td>1</td>
+          <td>$40</td>
+          <td class="alnCenter"><button class="js-btn-delete btn">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <!-- Display the total for my orders -->
-  <div>
-    Total: <span class="js-total-price">100.00</span>
-  </div>
-  
+    <!-- Display the total for my orders -->
+    <div class="vr boldness">
+      Total: <span class="js-total-price">100.00</span>
+    </div>
+  </main>
+
 </body>
 </html>

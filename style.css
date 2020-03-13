@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(64, 59, 103);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 6px rgb(0,0,0,0.3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background:rgb(64, 59, 103);
+  color: whitesmoke;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.vr {
+  margin-bottom: 15px;
+}
+
+.vr_2x {
+  margin-bottom: 30px;
+}
+
+.vr_children > * {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: slateblue;
+  color: whitesmoke;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.boldness {
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+.alnCenter {
+  text-align: center;
+}

@@ -12,7 +12,8 @@ function init() {
   // $('.js-click-add-order').on('click', clickAddToOrder);
 }
 
-function deleteOrder() {
+function deleteOrder(event) {
+  console.log('DELETE:', event);
   console.log('DELETE:', this);
   // $(this).parent().parent().remove();
   const orderIndex = $(this).data('index')
@@ -25,6 +26,7 @@ function deleteOrder() {
 }
 
 function submitPizzaOrder(event) {
+  console.log('submit:', event);
   event.preventDefault();
   console.log('PIZZA YAY!!!');
 
@@ -57,7 +59,7 @@ function render() {
       <td>${individualOrder.pizzaType}</td>
       <td>${individualOrder.pizzaQuantity}</td>
       <td>$${individualOrder.pizzaPrice}</td>
-      <td><button class="js-btn-delete" data-index="${i}">Delete</button></td>
+      <td><button class="btn js-btn-delete" data-index="${i}">Delete</button></td>
     </tr>
     `);
   }
